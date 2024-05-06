@@ -1,0 +1,37 @@
+product <- list(
+  list(name = "Apple",price = 0.5),
+  list(name = "Bannana",price = 0.3),
+  list(name = "Milk",price = 2),
+  list(name = "Bread",price = 1.5),
+  list(name = "eggs",price = 2.5)
+)
+
+shopping_cart <- list()
+cart_items_to_add <- list(
+  list(name = "Apple", quantity = 3),
+  list(name = "milk", quantity = 2)
+)
+
+qunatity <- item$quantity
+product <- NULL
+
+for (p in products) {
+  if (p$name == product_name) {
+    product <- p
+    break
+  }
+}
+
+if (!is.null(product)) {
+  cart_name <- list(name = product$name, price = product$price, quantity = quantity)
+  shopping_cart <- c(shopping_cart, list(cart_item))
+  cart
+}
+
+#calculate and display result
+subtotal <- 0
+cat("\n Recipt: \n")
+for (item in shopping_cart) {
+  item_total <- item$price * item$quantity
+}
+
