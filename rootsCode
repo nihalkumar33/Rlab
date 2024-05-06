@@ -1,0 +1,30 @@
+#to find the roots of quadratic equations
+#Note: Here it is important to select all the program before running
+a <- 1
+b <- 1
+c <- 3
+d <- (b*b - 4*a*c)
+
+if (d == 0) {
+  print("The roots are real and same")
+  r1 <- b/2*a
+  r2 <- b/2*a
+  roots <- c(r1, r2)
+}else if (d>0) {
+  print("The roots are real and distinct")
+  r1 <- (-b + sqrt(d))/(2*a)
+  r2 <- (-b - sqrt(d))/(2*a)
+  roots <- c(r1, r2)
+}else {
+  print("The roots are complex and imaginary")
+  rp <- (-b/2*a)
+  ip <- sqrt(abs(d)/2*a)
+  r1 <- complex(real = rp, imaginary = ip)
+  r2 <- complex(real = rp, imaginary = -ip)
+  roots <- c(r1, r2)
+}
+
+show(roots)
+
+
+
