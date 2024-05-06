@@ -1,0 +1,9 @@
+(x_list <- seq(1, 9, by = 2))
+sum_x <- 0
+
+for (x in x_list) {
+  sum_x <- sum_x + x
+  cat("The current loop element is: ", x, "\n")
+}
+
+cat("Thecummilative total is: ", sum_x)
