@@ -1,0 +1,14 @@
+subject <- c("AI", "DCN", "AIL", "LPQ", "DAA")
+marks <- c(90, 12, 90, 56, 87)
+
+avg <- mean(marks)
+
+barplot(marks, names.arg = subject, col = "skyblue", main = "Student's Performance in 3rd sem", xlab = "Subjects", ylab = "Marks")
+pie(marks, labels = subject, col = rainbow(length(marks)), main = "Student's Performance in 3rd sem")
+
+cat("Average marks: ", avg, "\n")
+cat("Qualitative Performance: \n")
+
+for (i in 1:length(marks)) {
+  cat (subject[i], ":", ifelse(marks[i] >= avg, "Good", "Needs Improvevement"), "\n")
+}
