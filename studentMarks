@@ -1,0 +1,34 @@
+ns<-5
+nc<-5
+studnames<-c("UMESH YADAV","YUZI CHAHAL","DINSEH KARTHIK","KL RAHUL","UMMI YADAV")
+cmarks<-matrix(c(89,98,56,79,78,
+                 56,98,45,56,89,
+                 78,99,46,78,89,
+                 78,98,56,45,78,
+                 98,98,78,56,45),
+                 nrow =ns,byrow=TRUE )
+student_records<-list()
+for(student_index in 1:ns){
+stud_name<-studnames[student_index]
+total_marks<-sum(cmarks[student_index,])
+average_marks<-total_marks/nc
+
+grade<-ifelse(average_marks>=90,"A",
+       ifelse(average_marks>=80,"B",
+       ifelse(average_marks>=70,"C",
+       ifelse(average_marks>=60,"D","F"))))
+
+student_record<-list(name=stud_name,marks=cmarks[student_index,],
+                     total=total_marks,average=average_marks,grade=grade)
+student_records<-c(student_records,list(student_record))
+
+}
+
+cat("\n STUDENT GRADE REPORT")
+for(student_record in student_records){
+  cat("\nNAME",student_record$name,"\n")
+  cat("\nMARKS",student_record$marks,"\n")
+  cat("TOTAL MARKS",student_record$total,"\n")
+  cat("AVERAGE MARKS",student_record$average,"\n")
+  cat("GRADE:",student_record$grade,"\n")
+}
